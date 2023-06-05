@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "TBox",
+	"category" : "Takuzu-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TBoxUnknown",
+	"type" : "normal"
+}
