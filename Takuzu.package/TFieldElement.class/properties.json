@@ -1,16 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "Object",
-	"category" : "Takuzu-Core",
+	"super" : "BlElement",
+	"category" : "Takuzu-UI",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"value",
-		"field",
-		"position",
-		"valueDictionary"
+		"field"
 	],
-	"name" : "TBox",
+	"name" : "TFieldElement",
 	"type" : "normal"
 }
