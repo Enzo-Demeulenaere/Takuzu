@@ -1,14 +1,13 @@
 as yet unclassified
-open4x4
+openWithModel: aTField
 
 	| aFieldElement space |
 	space := BlSpace new.
 	aFieldElement := self new
-		                 field: TField gridForTest;
+		                 field: aTField;
 		                 yourself.
-
 	space addChild: aFieldElement.
 	space pulse
-		extent: 500@500 ;
+		extent: 500 @ 500;
 		resizable: false;
 		show
