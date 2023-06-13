@@ -3,9 +3,9 @@ testIsThisLineUniqueAmongArray
 
 	| field box0 box1 boxNil originalLine line1 line2 line3 |
 	field := TField new.
-	box0 := TBoxSet value: 0.
-	box1 := TBoxSet value: 1.
-	boxNil := TBoxUnknown.
+	box0 := TSetBox value: 0.
+	box1 := TSetBox value: 1.
+	boxNil := TUnknownBox.
 	originalLine := TLine new contents: (OrderedCollection
 			                 with: box0
 			                 with: box0
@@ -28,9 +28,7 @@ testIsThisLineUniqueAmongArray
 			          with: boxNil).
 	self deny:
 		(field isThisLineUnique: originalLine amongArray: { line1 }).
-	self deny: (field
-			 isThisLineUnique: originalLine
-			 amongArray: {line2}).
-	self deny: (field
-			 isThisLineUnique: originalLine
-			 amongArray: {line3})
+	self deny:
+		(field isThisLineUnique: originalLine amongArray: { line2 }).
+	self deny:
+		(field isThisLineUnique: originalLine amongArray: { line3 })
