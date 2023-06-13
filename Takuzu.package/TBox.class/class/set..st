@@ -1,3 +1,3 @@
 initialization
 set: aNumber
-	^ TBoxSet value: aNumber
+	^ TSetBox value: aNumber

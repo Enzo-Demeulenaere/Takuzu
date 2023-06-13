@@ -1,5 +1,5 @@
 as yet unclassified
-buildEmptyFor: aString
+buildArrayFor: aString
 
 	| array index |
 	lines := self splitLines: aString.

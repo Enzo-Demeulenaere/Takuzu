@@ -1,7 +1,7 @@
 tests
 testBoxUnknownClick
 	|box|
-	box := TBoxUnknown new.
+	box := TUnknownBox new.
 	self assert: box value isNil.
 	box click.
 	self assert: box value equals: 0.

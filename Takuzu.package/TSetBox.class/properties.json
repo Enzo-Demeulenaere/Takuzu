@@ -1,13 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "Object",
+	"super" : "TBox",
 	"category" : "Takuzu-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"contents"
-	],
-	"name" : "TLine",
-	"type" : "variable"
+	"instvars" : [ ],
+	"name" : "TSetBox",
+	"type" : "normal"
 }
