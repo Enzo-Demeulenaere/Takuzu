@@ -2,7 +2,5 @@ as yet unclassified
 definePackages: spec
 
 	^ spec
-		  package: 'Takuzu';
-		  package: 'Takuzu-Tests'
-		  with: [ spec requires: #( 'Takuzu' ) ];
+		  package: 'Takuzu' with: [ spec requires: #( 'Bloc' 'Toplo' ) ];		  package: 'Takuzu-Tests' with: [ spec requires: #( 'Takuzu' ) ];
 		  yourself

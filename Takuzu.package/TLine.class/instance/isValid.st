@@ -10,8 +10,7 @@ isValid
 			(self contents at: index) value
 			= (self contents at: index + 1) value and: [
 				(self contents at: index + 1) value
-				= (self contents at: index + 2) value ifTrue: [
-					^ false ] ] ] ].
+				= (self contents at: index + 2) value ifTrue: [ ^ false ] ] ] ].
 
 	^ (nbOf0 = nbOf1 and: [ nbOf0 = (length // 2) ]) or: [
 		  nbOf0 <= (length // 2) and: [ nbOf1 <= (length // 2) ] ]
