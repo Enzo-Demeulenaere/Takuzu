@@ -1,4 +1,4 @@
 testing
-isTBoxUnknown
+isTUnknownBox
 
 	^ false
