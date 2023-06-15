@@ -6,14 +6,33 @@ menuLevel
 	menu label: (ToLabel text: 'Levels').
 	menu icon:
 		(ToImage inner: (Smalltalk ui icons iconNamed: #solidMenu)).
-	menu addItem: self menuLevel4.
-	menu addItem: self menuLevel6.
-	menu addItem: self menuLevel8.
-	"menu addItem:
-		((ToButtonMenuItem new labelText: '10x10') whenClickedDo: [
-			 TFieldElement launch10 ]).
-	menu addItem:
-		((ToButtonMenuItem new labelText: '12x12') whenClickedDo: [
-			 TFieldElement launch12 ])."
+
+	4 to: 8 by: 2 do: [ :index |
+		| subMenu |
+		subMenu := ToMenu new label:
+			           (ToLabel new text: (String streamContents: [ :out |
+					             out
+						             print: index;
+						             nextPut: $x;
+						             print: index ])).
+		1 to: 5 do: [ :i |
+			| stream selector tmp |
+			stream := String streamContents: [ :out |
+				          out
+					          nextPutAll: 'Level';
+					          space;
+					          print: i ].
+			selector := String streamContents: [ :out |
+				            out
+					            nextPutAll: 'launch';
+					            print: index;
+					            nextPutAll: 'Grid';
+					            print: i ].
+			tmp := TFieldElement class selectors select: [ :each |
+				       each = selector ].
+			subMenu addItem:
+				((ToButtonMenuItem new labelText: stream) whenClickedDo: [
+					 TFieldElement perform: selector asSymbol ]) ].
+		menu addItem: subMenu ].
 
 	^ menu
