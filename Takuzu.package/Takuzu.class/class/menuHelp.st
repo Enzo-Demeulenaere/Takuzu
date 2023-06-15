@@ -34,7 +34,7 @@ Have fun !' asRopedText foreground: Color white).
 			layout: BlFrameLayout new;
 			addChild: container;
 			constraintsDo: [ :c |
-				c horizontal fitContent.
+				c horizontal matchParent.
 				c vertical fitContent ].
 		space pulse.
 		space extent: container extent.
