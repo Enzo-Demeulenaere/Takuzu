@@ -7,7 +7,7 @@ menuLevel
 	menu icon:
 		(ToImage inner: (Smalltalk ui icons iconNamed: #solidMenu)).
 
-	4 to: 8 by: 2 do: [ :index |
+	4 to: 12 by: 2 do: [ :index |
 		| subMenu |
 		subMenu := ToMenu new label:
 			           (ToLabel new text: (String streamContents: [ :out |

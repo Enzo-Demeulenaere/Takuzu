@@ -8,4 +8,5 @@ level4Grid1
 	____'.
 
 
-	^ self grid: (LevelImporter fromString: level fromPackage: self package)
+	^ self grid:
+		  (LevelImporter fromString: level fromPackage: self package)
