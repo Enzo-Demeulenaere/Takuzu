@@ -24,7 +24,7 @@ menuLevel
 					          print: i ].
 			selector := String streamContents: [ :out |
 				            out
-					            nextPutAll: 'launch';
+					            nextPutAll: 'level';
 					            print: index;
 					            nextPutAll: 'Grid';
 					            print: i ].
@@ -32,7 +32,7 @@ menuLevel
 				       each = selector ].
 			subMenu addItem:
 				((ToButtonMenuItem new labelText: stream) whenClickedDo: [
-					 TFieldElement perform: selector asSymbol ]) ].
+					 TFieldElement openWithModel: (TField perform: selector asSymbol) ]) ].
 		menu addItem: subMenu ].
 
 	^ menu
