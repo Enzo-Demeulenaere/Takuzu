@@ -3,9 +3,9 @@ level4Grid2
 
 	| level |
 	level := '___0
-	_0_0
-	____
-	_00_'.
+_0_0
+____
+_00_'.
 
 
 	^ self grid:

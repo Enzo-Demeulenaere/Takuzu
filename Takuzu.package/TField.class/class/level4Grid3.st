@@ -3,9 +3,9 @@ level4Grid3
 
 	| level |
 	level := '1___
-	_1__
-	_10_
-	___0'.
+_1__
+_10_
+___0'.
 
 
 	^ self grid:
