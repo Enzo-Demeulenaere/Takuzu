@@ -1,15 +1,15 @@
 as yet unclassified
 openWithMenuBar
 
-	| space playMenu levelMenu helpMenu bar title |
-	playMenu := self menuPlay.
+	| space randomMenu levelMenu helpMenu bar title |
+	randomMenu := self menuRandom.
 	levelMenu := self menuLevel.
 	helpMenu := self menuHelp.
 	bar := self menuBar.
 	title := self title.
 
-	bar addMenu: playMenu.
 	bar addMenu: levelMenu.
+	bar addMenu: randomMenu.
 	bar addMenu: helpMenu.
 	space := OBlSpace new.
 

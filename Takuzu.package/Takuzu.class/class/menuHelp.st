@@ -17,6 +17,13 @@ The goal is to fill the grid with red or blue cells following these 3 rules :
 	- You can''t have more than 2 cells of the same color aligned.
 	- The must be as many red and blue cells on each row and column
 	- Rows and Columns must be all different one to another
+	
+-----
+
+You can start playing with the ''Levels'' menu, with non-ambiguous levels from size 4x4 to 12x12.
+
+You can also play on 4x4 and 6x6 randomly generated levels in the ''Random'' menu.
+The random generation is a bit messy so you may encounter ambiguous levels, improvements might appear in the future.
 			
 Have fun !' asRopedText foreground: Color white).
 		lab beMultiLine.

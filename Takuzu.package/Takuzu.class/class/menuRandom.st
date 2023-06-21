@@ -1,9 +1,9 @@
 as yet unclassified
-menuPlay
+menuRandom
 
 	| menu |
 	menu := ToMenu new.
-	menu label: (ToLabel text: 'Play').
+	menu label: (ToLabel text: 'Random').
 	menu icon:
 		(ToImage inner: (Smalltalk ui icons iconNamed: #solidMenu)).
 	menu addItem:
