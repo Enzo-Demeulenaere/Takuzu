@@ -17,4 +17,6 @@ openWithMenuBar
 	space root addChild: title.
 	space root addChild: bar.
 	space extent: 300 @ 300.
-	space show
+	space show.
+	
+	^ space
