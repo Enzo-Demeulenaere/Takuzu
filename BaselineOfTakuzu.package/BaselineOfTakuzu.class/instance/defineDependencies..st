@@ -16,4 +16,8 @@ defineDependencies: spec
 
 	spec baseline: 'ContainersArray2D' with: [
 		spec repository:
-			'github://Enzo-Demeulenaere/Containers-Array2D:master/src' ]
+			'github://Enzo-Demeulenaere/Containers-Array2D:master/src' ].
+		
+	spec baseline: 'EmbeddedSupport' with: [
+		spec repository:
+			'github://tesonep/pharo-vm-embedded-example:pharo-11/smalltalk-src' ].	
