@@ -8,10 +8,10 @@ wget -O -  get.pharo.org/64/110+vm | bash
 
 if [ ! -z "$GITHUB_WORKSPACE" ] 
 then
-	./pharo Takuzu.image eval --save Metacello new \
-	    baseline:\'Takuzu\'; \
-	    repository: \'gitlocal://$GITHUB_WORKSPACE/src\';\
-	    load: \'core\'
+	./pharo Takuzu.image eval --save "Metacello new 
+	    baseline:'Takuzu'; 
+	    repository: 'gitlocal://$GITHUB_WORKSPACE/src';
+	    load: 'core'"
 else
 	./pharo Takuzu.image eval --save "Metacello new
 	    baseline:'Takuzu';
