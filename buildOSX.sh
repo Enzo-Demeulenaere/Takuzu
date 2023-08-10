@@ -6,7 +6,7 @@ set -e
 wget -O -  get.pharo.org/64/110+vm | bash
 ./pharo Pharo.image save Takuzu
 
-if [ -z "$GITHUB_WORKSPACE" ] 
+if [ ! -z "$GITHUB_WORKSPACE" ] 
 then
 	./pharo Takuzu.image eval --save Metacello new \
 	    baseline:'Takuzu'; \
