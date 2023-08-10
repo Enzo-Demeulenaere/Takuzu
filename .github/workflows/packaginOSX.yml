@@ -16,13 +16,13 @@ jobs:
 
       - name: Install create-dmg
         run: |
-        brew update
-        brew install create-dmg
-        brew upgrade
+          brew update
+          brew install create-dmg
+          brew upgrade
 
       - name: Create Package
         run: |
-        ./buildOSX.sh
+          ./buildOSX.sh
 
       - name: Continuous Release
         if: ${{ github.event_name == 'push' }}
