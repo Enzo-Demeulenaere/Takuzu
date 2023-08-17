@@ -20,6 +20,10 @@ openEndGameWindowInBloc
 	space root addChild: container.
 	space
 		pulse;
-		extent: 300 @ 300;
-		show.
+		extent: 300 @ 300.
+	
+	"Hack to fix windows position to show title bar"		
+	(OSPlatform current isWindows) ifTrue: [ space position: space position + 100@100 ].
+	
+	space show.
 	^ space

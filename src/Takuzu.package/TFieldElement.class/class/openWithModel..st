@@ -6,8 +6,11 @@ openWithModel: aTField
 	aFieldElement := self new
 		                 field: aTField;
 		                 yourself.
-	space addChild: aFieldElement.
+	space root addChild: aFieldElement.
 	space pulse
 		extent: 500 @ 500;
-		resizable: false;
-		show
+		resizable: false.
+
+	"Hack to fix windows position to show title bar"		
+	(OSPlatform current isWindows) ifTrue: [ space position: space position + 100@100 ].
+	space show
