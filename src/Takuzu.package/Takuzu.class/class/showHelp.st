@@ -30,7 +30,7 @@ Have fun !' asRopedText foreground: Color white).
 			             c horizontal fitContent.
 			             c vertical fitContent ].
 	container addChild: lab.
-	space := OBlSpace new.
+	space := BlSpace new.
 	space root
 		layout: BlFrameLayout new;
 		addChild: container;

@@ -16,7 +16,7 @@ openEndGameWindowInBloc
 			 c frame horizontal alignCenter.
 			 c frame vertical alignCenter ]).
 
-	space := OBlSpace new.
+	space := BlSpace new.
 	space root addChild: container.
 	space
 		pulse;

@@ -11,7 +11,7 @@ openWithMenuBar
 	bar addMenu: levelMenu.
 	bar addMenu: randomMenu.
 	bar addMenu: helpMenu.
-	space := OBlSpace new.
+	space := BlSpace new.
 
 
 	space root addChild: title.
