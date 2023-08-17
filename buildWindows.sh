@@ -21,6 +21,12 @@ fi
 
 ./pharo Takuzu.image eval "Takuzu generateWindowsPackage"
 
+ls -lah
+
 cd build
+
+ls -lah
+cat CMakeLists.txt
+
 cmake -B . -S . && cmake --build .
 powershell -File buildWindowsPackage.ps1
