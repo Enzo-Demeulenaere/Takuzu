@@ -21,3 +21,7 @@ defineDependencies: spec
 	spec baseline: 'EmbeddedSupport' with: [
 		spec repository:
 			'github://tesonep/pharo-vm-embedded-example:pharo-11/smalltalk-src' ].	
+		
+	spec baseline: 'ObjCBridge' with: [
+		spec repository:
+			'github://tesonep/objcbridge:master/src' ].		
