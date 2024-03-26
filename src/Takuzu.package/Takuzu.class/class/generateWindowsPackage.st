@@ -1,7 +1,7 @@
 as yet unclassified
 generateWindowsPackage
 
-	AppGeneratorOSXGenerator new
+	AppGeneratorWindowsGenerator new
 		properties: {
 			#AppName -> 'Takuzu'.
 			#InfoString -> 'A Takuzu game written in Pharo'.
