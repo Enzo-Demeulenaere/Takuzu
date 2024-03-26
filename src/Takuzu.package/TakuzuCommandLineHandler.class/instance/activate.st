@@ -2,7 +2,7 @@ activation
 activate
 
 	OSWindowDriver current startUp: true.
-	EmbeddedSupport errorHandler: ESSDLMessageErrorHandler new.
+	AppGeneratorSupport errorHandler: AppGeneratorSDLMessageErrorHandler new.
 
 	OSPlatform current isMacOSX
 		ifTrue: [ | main |
