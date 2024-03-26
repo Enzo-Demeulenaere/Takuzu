@@ -11,12 +11,16 @@ then
 	./pharo Takuzu.image eval --save "Metacello new 
 	    baseline:'Takuzu'; 
 	    repository: 'gitlocal://$GITHUB_WORKSPACE/src';
+		onUpgradeUseLoaded;
+		onConflictUseLoaded;
 	    load: 'core'"
 else
 	./pharo Takuzu.image eval --save "Metacello new
 	    baseline:'Takuzu';
 	    repository: 'github://tesonep/Takuzu:main/src';
-	    load: 'core'"	
+		onUpgradeUseLoaded;
+		onConflictUseLoaded;
+	    load: 'core'"
 fi
 
 ./pharo Takuzu.image eval "Takuzu generateWindowsPackage"
