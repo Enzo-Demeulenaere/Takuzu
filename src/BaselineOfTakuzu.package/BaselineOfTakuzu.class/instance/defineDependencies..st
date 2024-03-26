@@ -18,9 +18,9 @@ defineDependencies: spec
 		spec repository:
 			'github://Enzo-Demeulenaere/Containers-Array2D:master/src' ].
 		
-	spec baseline: 'EmbeddedSupport' with: [
+	spec baseline: 'ApplicationGenerator' with: [
 		spec repository:
-			'github://tesonep/pharo-vm-embedded-example:pharo-11/smalltalk-src' ].	
+			'github://tesonep/PharoApplicationGenerator:master/src' ].	
 		
 	spec baseline: 'ObjCBridge' with: [
 		spec repository:
