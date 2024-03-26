@@ -2,6 +2,10 @@ baselines
 defineDependencies: spec
 
 	spec
+		baseline: 'Alexandrie'
+		with: [ spec repository: 'github://pharo-graphics/Alexandrie:8008a3d/src' ].
+
+	spec
 		baseline: 'Bloc'
 		with: [ spec repository: 'github://pharo-graphics/Bloc:2c698bc/src' ].
 
@@ -13,10 +17,6 @@ defineDependencies: spec
 	spec
 		baseline: 'Album'
 		with: [ spec repository: 'github://pharo-graphics/Album:3634b88/src' ].
-
-	spec
-		baseline: 'Alexandrie'
-		with: [ spec repository: 'github://pharo-graphics/Alexandrie:8008a3d/src' ].
 
 	spec
 		baseline: 'Toplo'
