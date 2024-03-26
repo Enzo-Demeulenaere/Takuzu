@@ -3,7 +3,7 @@ defineDependencies: spec
 
 	spec
 		baseline: 'Bloc'
-		with: [ spec repository: 'github://pharo-graphics/Bloc:dev-1.0/src' ].
+		with: [ spec repository: 'github://pharo-graphics/Bloc:2c698bc/src' ].
 
 	spec
 		baseline: 'LevelImporter'
@@ -12,7 +12,7 @@ defineDependencies: spec
 
 	spec
 		baseline: 'Toplo'
-		with: [ spec repository: 'github://plantec/Toplo/src' ].
+		with: [ spec repository: 'github://pharo-graphics/Toplo:672c93b/src' ].
 
 	spec baseline: 'ContainersArray2D' with: [
 		spec repository:
@@ -24,4 +24,4 @@ defineDependencies: spec
 		
 	spec baseline: 'ObjCBridge' with: [
 		spec repository:
-			'github://tesonep/objcbridge:master/src' ].		
+			'github://tesonep/objcbridge:master/src' ].	
