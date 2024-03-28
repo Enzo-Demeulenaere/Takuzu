@@ -1,4 +1,0 @@
-testing
-isTUnknownBox
-
-	^ false

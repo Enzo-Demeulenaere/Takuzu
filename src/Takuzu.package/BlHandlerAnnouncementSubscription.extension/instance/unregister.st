@@ -1,4 +1,0 @@
-*Takuzu
-unregister
-	
-	"Just compatibility"
