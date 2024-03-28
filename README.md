@@ -17,7 +17,7 @@ Metacello new
     repository: 'github://tesonep/Takuzu/src';
     onUpgradeUseLoaded;
     onConflictUseLoaded;
-    load: 'core'"
+    load: 'core'
 ```
 
 # How to play 
