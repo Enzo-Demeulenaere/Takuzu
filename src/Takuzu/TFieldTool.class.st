@@ -6,7 +6,7 @@ Class {
 		'field',
 		'characterClassBinding'
 	],
-	#category : #'Takuzu-Core'
+	#category : 'Takuzu-Core'
 }
 
 { #category : #'as yet unclassified' }

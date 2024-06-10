@@ -6,7 +6,7 @@ Class {
 		'field',
 		'colorDictionary'
 	],
-	#category : #'Takuzu-UI'
+	#category : 'Takuzu-UI'
 }
 
 { #category : #accessing }

@@ -7,7 +7,7 @@ Class {
 		'position',
 		'valueDictionary'
 	],
-	#category : #'Takuzu-Core'
+	#category : 'Takuzu-Core'
 }
 
 { #category : #initialization }

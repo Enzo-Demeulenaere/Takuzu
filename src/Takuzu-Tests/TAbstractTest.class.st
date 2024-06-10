@@ -1,7 +1,7 @@
 Class {
 	#name : #TAbstractTest,
 	#superclass : #TestCase,
-	#category : #'Takuzu-Tests'
+	#category : 'Takuzu-Tests'
 }
 
 { #category : #'as yet unclassified' }

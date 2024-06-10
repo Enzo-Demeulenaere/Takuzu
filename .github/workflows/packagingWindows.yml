@@ -1,0 +1,44 @@
+name: Packaging for Windows
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+on:
+  push:
+    branches: [ main ]
+  
+jobs:
+  build:
+    runs-on: [ windows-latest ]
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+        with:
+            fetch-depth: 5
+
+      # Install Installer generation tool
+      - name: Build Advanced Installer Project
+        uses: caphyon/advinst-github-action@v1.0
+        with:
+          advinst-version: '20.9.1'
+          advinst-enable-automation: 'true'
+
+      - name: Install Cygwin
+        uses: cygwin/cygwin-install-action@master
+        with: 
+            packages: cmake mingw64-x86_64-clang zip unzip wget curl make git libtool
+
+      - name: Create Package
+        run: |
+          bash ./buildWindows.sh
+
+      - name: Continuous Release
+        if: ${{ github.event_name == 'push' }}
+        uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest-windows"
+          prerelease: true
+          title: "Development Build"
+          files: |
+            build/installer/*.msi

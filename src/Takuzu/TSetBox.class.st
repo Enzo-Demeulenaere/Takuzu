@@ -1,7 +1,7 @@
 Class {
 	#name : #TSetBox,
 	#superclass : #TBox,
-	#category : #'Takuzu-Core'
+	#category : 'Takuzu-Core'
 }
 
 { #category : #accessing }

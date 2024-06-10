@@ -1,7 +1,7 @@
 Class {
 	#name : #TFieldToolTest,
 	#superclass : #TAbstractTest,
-	#category : #'Takuzu-Tests'
+	#category : 'Takuzu-Tests'
 }
 
 { #category : #tests }

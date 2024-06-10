@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'grid'
 	],
-	#category : #'Takuzu-Core'
+	#category : 'Takuzu-Core'
 }
 
 { #category : #'point functions' }
@@ -532,7 +532,8 @@ TField class >> size: aNumber [
 { #category : #'as yet unclassified' }
 TField >> checkIfFinished [
 
-	(self isFull and: [ self isValid ]) ifTrue: [ self endGame ]
+	(self isFull and: [ self isValid ]) 
+		ifTrue: [ self endGame ]
 ]
 
 { #category : #'as yet unclassified' }
@@ -547,28 +548,9 @@ TField >> clickOnBox: aTBox [
 { #category : #'as yet unclassified' }
 TField >> endGame [
 
-	| container space |
-	container := BlElement new
-		             background: Color veryDarkGray;
-		             layout: BlFrameLayout new;
-		             constraintsDo: [ :c |
-			             c horizontal matchParent.
-			             c vertical matchParent ].
-
-	container addChild: ((BlTextElement new text: ('Victory' asRopedText
-				   fontName: 'Phosphate';
-				   foreground: Color white;
-				   fontSize: 50)) constraintsDo: [ :c |
-			 c frame horizontal alignCenter.
-			 c frame vertical alignCenter ]).
-
-	space := OBlSpace new.
-	space root addChild: container.
-	space
-		pulse;
-		extent: 300 @ 300;
-		show.
-	^ space
+	(OSPlatform current isMacOSX and: [UNNotificationCenter isAvailable])
+		ifTrue: [ UNNotificationCenter uniqueInstance showNotificationTitle: 'Victory' body: 'You have won!!!' ]
+		ifFalse: [ self openEndGameWindowInBloc ]
 ]
 
 { #category : #accessing }
@@ -664,6 +646,37 @@ TField >> isValid [
 			^ false ].
 		rowIndex := rowIndex + 1 ].
 	^ true
+]
+
+{ #category : #'as yet unclassified' }
+TField >> openEndGameWindowInBloc [
+  
+	| space container |
+	container := BlElement new
+		             background: Color veryDarkGray;
+		             layout: BlFrameLayout new;
+		             constraintsDo: [ :c |
+			             c horizontal matchParent.
+			             c vertical matchParent ].
+
+	container addChild: ((BlTextElement new text: ('Victory' asRopedText
+				   fontName: 'Phosphate';
+				   foreground: Color white;
+				   fontSize: 50)) constraintsDo: [ :c |
+			 c frame horizontal alignCenter.
+			 c frame vertical alignCenter ]).
+
+	space := BlSpace new.
+	space root addChild: container.
+	space
+		pulse;
+		extent: 300 @ 300.
+	
+	"Hack to fix windows position to show title bar"		
+	(OSPlatform current isWindows) ifTrue: [ space position: space position + 100@100 ].
+	
+	space show.
+	^ space
 ]
 
 { #category : #'as yet unclassified' }

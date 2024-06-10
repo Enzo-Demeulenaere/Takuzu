@@ -1,7 +1,7 @@
 Class {
 	#name : #TLineTest,
 	#superclass : #TAbstractTest,
-	#category : #'Takuzu-Tests'
+	#category : 'Takuzu-Tests'
 }
 
 { #category : #tests }

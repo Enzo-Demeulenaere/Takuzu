@@ -1,7 +1,7 @@
 Class {
 	#name : #TUnknownBox,
 	#superclass : #TBox,
-	#category : #'Takuzu-Core'
+	#category : 'Takuzu-Core'
 }
 
 { #category : #'as yet unclassified' }
