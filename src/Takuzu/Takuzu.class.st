@@ -159,7 +159,6 @@ Takuzu class >> openWithMenuBar [
 	bar addMenu: helpMenu.
 	space := BlSpace new.
 
-
 	space root addChild: title.
 	space root addChild: bar.
 	space extent: 300 @ 300.

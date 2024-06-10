@@ -65,7 +65,8 @@ TFieldElement class >> openWithModel: aTField [
 	aFieldElement := self new
 		                 field: aTField;
 		                 yourself.
-	space root addChild: aFieldElement.
+
+  space root addChild: aFieldElement.
 	space pulse
 		extent: 500 @ 500;
 		resizable: false.

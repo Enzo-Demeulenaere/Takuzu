@@ -650,7 +650,7 @@ TField >> isValid [
 
 { #category : #'as yet unclassified' }
 TField >> openEndGameWindowInBloc [
-
+  
 	| space container |
 	container := BlElement new
 		             background: Color veryDarkGray;
