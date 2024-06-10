@@ -2,8 +2,8 @@ SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
       #baseline : 'Takuzu',
-      #onConflict : #useIncoming,
-      #onUpgrade : #useIncoming,
+      #onConflict : #useLoaded,
+      #onUpgrade : #useLoaded,
       #ignoreImage : true,
       #directory : 'src',
       #platforms : [ #pharo ]
